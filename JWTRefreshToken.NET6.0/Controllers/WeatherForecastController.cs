@@ -32,7 +32,7 @@ namespace JWTRefreshToken.NET6._0.Controllers
             })
             .ToArray();
         }
-        //[HttpGet(Name = "GetWeatherForecast1")]
+        //[HttpGet(Name = "GetWeatherForecast1")] testno
         //public IEnumerable<WeatherForecast> post()
         //{
         //    _logger.LogInformation("Weather forecast Get method called");
