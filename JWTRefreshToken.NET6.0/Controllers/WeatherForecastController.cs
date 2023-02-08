@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JWTRefreshToken.NET6._0.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -32,17 +32,17 @@ namespace JWTRefreshToken.NET6._0.Controllers
             })
             .ToArray();
         }
-        [HttpGet(Name = "GetWeatherForecast1")]
-        public IEnumerable<WeatherForecast> Get1()
-        {
-            _logger.LogInformation("Weather forecast Get method called");
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
+        //[HttpGet(Name = "GetWeatherForecast1")]
+        //public IEnumerable<WeatherForecast> post()
+        //{
+        //    _logger.LogInformation("Weather forecast Get method called");
+        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //    {
+        //        Date = DateTime.Now.AddDays(index),
+        //        TemperatureC = Random.Shared.Next(-20, 55),
+        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+        //    })
+        //    .ToArray();
+        //}
     }
 }
