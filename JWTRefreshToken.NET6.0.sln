@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTRefreshToken.NET6.0", "JWTRefreshToken.NET6.0\JWTRefreshToken.NET6.0.csproj", "{0AD4B02E-8567-4B30-B752-0239B6165FB0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA743800-2367-49A4-ACAD-BC3EC88409CD}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\main.yml = .github\workflows\main.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
