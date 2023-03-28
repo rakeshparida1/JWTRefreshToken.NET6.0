@@ -3,7 +3,7 @@ name: Publish 🚀
 on: push
  
 env:
-  AZURE_WEBAPP_NAME: TestAspNetCorePipeline
+  AZURE_WEBAPP_NAME: ASPNETCOREjwttoken
   AZURE_WEBAPP_PACKAGE_PATH: "./publish"  
 
 
