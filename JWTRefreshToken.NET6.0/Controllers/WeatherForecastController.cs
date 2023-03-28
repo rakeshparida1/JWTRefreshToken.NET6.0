@@ -23,7 +23,7 @@ namespace JWTRefreshToken.NET6._0.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInformation("Weather forecast Get method called");
+            _logger.LogInformation("Weather forecast Get method calling ");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -31,6 +31,7 @@ namespace JWTRefreshToken.NET6._0.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+            _logger.LogInformation("Weather forecast Get method called ");
         }
         //[HttpGet(Name = "GetWeatherForecast1")] testno
         //public IEnumerable<WeatherForecast> post()
