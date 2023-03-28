@@ -6,8 +6,8 @@ on:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME:TestAspNetCorePipeline
-  AURE_WEBAPP_PACKAGE_PATH:"./publish"
+  AZURE_WEBAPP_NAME: TestAspNetCorePipeline
+  AZURE_WEBAPP_PACKAGE_PATH: "./publish"  
 
 
 jobs:
@@ -30,12 +30,13 @@ jobs:
         
       - name: Publish
         run: dotnet publish ./JWTRefreshToken.NET6.0.sln --configuration Release --no-build --output '${{env.AZURE_WEBAPP_PACKAGE_PATH}}'
+      
       - name: Deployment
-        uses: actions/webapp-deploy@v2
+        uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{env.AZURE_WEBAPP_NAME}}
-          publish-profiles: ${{secrets.AZURE_PUBLISH_PROFILE}}
-          package: "${{env.AZURE_WEBAPP_PACKAGE_PATH}}"
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
       
         
         
